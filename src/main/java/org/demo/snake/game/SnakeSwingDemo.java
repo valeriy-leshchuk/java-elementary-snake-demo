@@ -18,11 +18,11 @@ public class SnakeSwingDemo {
 
         SwingField gameField = new SwingField(xSize, ySize, coordinateFactor);
 
-        int xPosition = 8;
+        int xPosition = 29;
         int yPosition = 8;
-        int snakeParts = 8;
+        int snakeParts = 25;
 
-        Snake snake = new Snake(xPosition, yPosition, snakeParts, gameField);
+        Snake snake = new Snake(snakeParts, xPosition, yPosition, gameField);
 
         gameField.setSnake(snake);
         gameField.redraw();
