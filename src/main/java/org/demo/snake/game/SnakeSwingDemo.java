@@ -15,7 +15,8 @@ public class SnakeSwingDemo {
         int xSize = 30;
         int ySize = 30;
         int coordinateFactor = 30;
-
+        int redrawPeriodInMills = 500;
+        
         SwingField gameField = new SwingField(xSize, ySize, coordinateFactor);
 
         int xPosition = 29;
@@ -27,7 +28,7 @@ public class SnakeSwingDemo {
         gameField.setSnake(snake);
         gameField.redraw();
         while (true) {
-            Thread.sleep(1000);
+            Thread.sleep(redrawPeriodInMills);
             snake.move();
             gameField.redraw();
         }
